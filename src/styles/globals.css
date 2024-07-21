@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+}
+
+/* Button styles */
+.custom-button {
+    background-color: #ffcf3c;
+    color: black;
+    border: none;
+    display: block;
+    width: 100%;
+    padding: 0.7rem 0;
+    font-size: 0.8rem;
+    font-weight: 400;
+    display: inline-block;
+}
+.custom-button:hover {
+    cursor: pointer;
+}
+
+/* Checkbox styles */
+.custom-checkbox {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.custom-checkbox input {
+    display: none;
+}
+
+.custom-checkbox .checkmark {
+    transition: all 0.5s ease;
+    width: 23px;
+    height: 23px;
+    background-color: #ffffff;
+    border: 0.5px solid #cdcdcd;
+    border-radius: 6px;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.custom-checkbox:hover .checkmark {
+    border-color: #bdbdbd;
+}
+
+.custom-checkbox .checkmark:hover {
+    border: 0.5px solid #bdbdbd;
+}
+
+.custom-checkbox input:focus + .checkmark {
+    outline: 3px solid #cbd2e0;
+}
+
+.custom-checkbox input:checked + .checkmark {
+    background-color: #2469f6;
+    border-color: #2469f6;
+}
+
+.custom-checkbox .checkmark:after {
+    content: '';
+    position: absolute;
+    display: none;
+    transition: all 0.5s ease;
+}
+
+/* Checkmark Display */
+.custom-checkbox input:checked + .checkmark:after {
+    display: block;
+}
+
+.custom-checkbox .checkmark:after {
+    left: 50%;
+    top: 43%;
+    width: 7px;
+    height: 16px;
+    border: solid white;
+    border-width: 0 1.5px 1.5px 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.custom-checkbox:hover .checkmark:after {
+    display: block;
+    border-color: #e3e3e3;
+}
+
+/* Checkable list item styles */
+
+.checkable-list-item {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 8px 15px 8px 22px;
+    background-color: white;
+    margin-bottom: 5px;
+}
+
+.checkable-list-item:hover {
+    cursor: pointer;
+}
+
+/* ItemsListing classes */
+.items-listing .pages {
+    max-height: 200px;
+    overflow-y: scroll;
+}
+
+.items-listing .pages::-webkit-scrollbar {
+    display: none;
+}
+
+.items-listing .pages {
+    -ms-overflow-style: none; /* IE and Edge */
+}
+.items-listing .pages {
+    scrollbar-width: none; /* Firefox */
+}
+
+/* Container classes */
+.item-listing-container {
+    position: relative;
+    margin-top: 1rem;
+    width: 26.28rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 2rem 1rem;
+    left: 50%;
+    /* top: 50%; */
+    transform: translateX(-50%);
+}
+
+hr {
+    position: relative;
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 1rem 0;
+}
